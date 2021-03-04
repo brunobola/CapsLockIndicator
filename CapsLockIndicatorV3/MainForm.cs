@@ -282,7 +282,9 @@ namespace CapsLockIndicatorV3
                     , Properties.Settings.Default.overlayPosition
                     , Properties.Settings.Default.indOpacity
                 );
-                indicatorOverlay.Show();
+                
+                if (!indicatorOverlay.IsDisposed)
+                    indicatorOverlay.Show();
             }
         }
         void ShowNoIconsCheckedChanged(object sender, EventArgs e)
